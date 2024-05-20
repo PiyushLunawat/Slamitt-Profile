@@ -1,0 +1,153 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "college": {
+      "name": "Symbiosis",
+      "city": "Pune"
+    },
+    "socialHandles": {
+      "Facebook": "https://facebook.com/johndoe",
+      "Instagram": "https://instagram.com/johndoe",
+      "YouTube": "https://youtube.com/johndoe",
+      "Twitter": "https://twitter.com/johndoe"
+    },
+    "description": "A proactive student passionate about entrepreneurship & innovation. I'm a problem solver with a talent for generating innovative ideas, & I enjoy working collaboratively with others towards common goals. My strengths include strong communication skills, a willingness to learn from others, & a commitment to success.",
+    "experiences": [
+      {
+        "companyName": "Bridge Media",
+        "city": "Bangalore",
+        "country": "India",
+        "jobProfile": "Content Creator",
+        "duration": "Feb 2024 - Present"
+      },
+      {
+        "companyName": "IPL",
+        "city": "Bangalore",
+        "country": "India",
+        "jobProfile": "Product Management",
+        "duration": "Feb 2022 - Mar 2023"
+      },
+      {
+        "companyName": "By the Gram",
+        "city": "Mumbai",
+        "country": "India",
+        "jobProfile": "Graphic Designer",
+        "duration": "Dec 2021 - Dec 2021"
+      },
+      {
+        "companyName": "Bridge Media",
+        "city": "Mumbai",
+        "country": "India",
+        "jobProfile": "Copy Writer",
+        "duration": "Feb 2020 - Sept 2020"
+      }
+    ],
+    "interests": [
+      "Masterchef",
+      "Baking",
+      "Dessert",
+      "Kathak",
+      "Entrepreneurship"
+    ],
+    "topSkills": [
+      { "$numberInt": "5" },
+      { "$numberInt": "4" },
+      { "$numberInt": "3" },
+      { "$numberInt": "4" },
+      { "$numberInt": "2" },
+      { "$numberInt": "3" }
+    ],
+    "endorsements": [
+      {
+        "name": "Mansoor Masood",
+        "jobProfile": "Product Manager",
+        "companyName": "LYNC",
+        "skills": [
+          "Communication",
+          "Negotiation",
+          "Marketing"
+        ]
+      },
+      {
+        "name": "Arpit S",
+        "jobProfile": "Data Analyst",
+        "companyName": "KPMG India",
+        "skills": ["Communication", "Listening"]
+      }
+    ],
+    "competitions": [
+      {
+        "competitionName": "Serial Storyteller",
+        "duration": "22 June, 2021 - 31 July, 2021",
+        "competitionType": "Management",
+        "numberOfParticipants": {
+          "$numberInt": "35"
+        },
+        "numberOfRounds": { "$numberInt": "7" },
+        "numberOfJudges": { "$numberInt": "5" },
+        "teamName": "Watermelon",
+        "task": "Lorem ipsum dolor sit amet. Quo illum tempore cum molestiae magnam eos quibusd am reiciendis vel nobis quos et eveniet eveniet qui consectetur rerum. Et molestias veniam est. ",
+        "submissionFiles": ["", "", ""],
+        "media": [
+          {
+            "type": "video",
+            "fileName": "FileName.mp4",
+            "description": "Team meeting and discussion"
+          },
+          {
+            "type": "document",
+            "fileName": "FileName.ppt",
+            "description": "Presentation file"
+          },
+          {
+            "type": "image",
+            "fileName": "FileName.jpg",
+            "description": "Crowd at the event"
+          }
+        ]
+      },
+      {
+        "competitionName": "Creator Architect",
+        "duration": "22 June, 2021 - 31 July, 2021",
+        "competitionType": "cultural",
+        "numberOfParticipants": {
+          "$numberInt": "35"
+        },
+        "numberOfRounds": { "$numberInt": "7" },
+        "numberOfJudges": { "$numberInt": "5" },
+        "teamName": "IIM_X039",
+        "teamMembers": [],
+        "task": "Lorem ipsum dolor sit amet. Quo illum tempore cum molestiae magnam eos quibusd am reiciendis vel nobis quos et eveniet eveniet qui consectetur rerum. Et molestias veniam est. ",
+        "submissionFiles": ["", "", ""],
+        "media": [
+          {
+            "type": "video",
+            "fileName": "FileName.mp4",
+            "description": "Team meeting and discussion"
+          },
+          {
+            "type": "document",
+            "fileName": "FileName.ppt",
+            "description": "Presentation file"
+          },
+          {
+            "type": "image",
+            "fileName": "FileName.jpg",
+            "description": "Crowd at the event"
+          }
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "roundName": "RoundName",
+        "feedback": [{
+          "author": "Mansoor Masood",
+          "role": "Financial due diligence analyst at KPMG India",
+          "comment": "Always be open to changes as testing is a stressful and dynamic environment",
+          "date": "6 July, 2022",
+          "rating": "8/12"
+        }]
+      }
+    ]
+  }

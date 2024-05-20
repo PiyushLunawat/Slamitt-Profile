@@ -48,6 +48,10 @@ const Home = () => {
     setSelectedComp(selectedComp);
   };
 
+   if (!userData) {
+    return <p className="text-center m-[20%] font-black">Loading...</p>; 
+  }
+
   return (
   <>
   <div className='hide flex w-full h-[92px] justify-between items-center'>
@@ -64,9 +68,9 @@ const Home = () => {
   <div className="mobile-view">
     <section className="min-h-screen w-screen lg:flex md:grid items-stretch text-white ">
       <div className="lg:w-4/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center sm:px-16 md:px-24 px-4 z-0">
-        <UserInfo/>
-        <Counter/>
-        <Interest/>
+        <UserInfo userData={userx}/>
+        <Counter userData={userx}/>
+        <Interest userData={userx}/>
         <div className="scroller mb-10">
           <div onClick={() => handleCompClick("Competition")} className={selectedComp === "Competition" ? "selected-comp" : "comps"}>Competitions</div>
           <div onClick={() => handleCompClick("HighLight")} className={selectedComp === "HighLight" ? "selected-comp" : "comps"}>Feedback</div>
@@ -74,11 +78,11 @@ const Home = () => {
           <div onClick={() => handleCompClick("Endorsement")} className={selectedComp === "Endorsement" ? "selected-comp" : "comps"}>Endorsements</div>
           <div onClick={() => handleCompClick("Synergy")} className={selectedComp === "Synergy" ? "selected-comp" : "comps"}>Synergy</div>
         </div>
-          {selectedComp === "Competition" && <Competition />}
-          {selectedComp === "HighLight" && <HighLight />}
-          {selectedComp === "TopSkill" && <TopSkill />}
-          {selectedComp === "Endorsement" && <Endorsement />}
-          {selectedComp === "Synergy" && <Synergy />}
+          {selectedComp === "Competition" && <Competition userData={userx}/>}
+          {selectedComp === "HighLight" && <HighLight userData={userx}/>}
+          {selectedComp === "TopSkill" && <TopSkill userData={userx}/>}
+          {selectedComp === "Endorsement" && <Endorsement userData={userx}/>}
+          {selectedComp === "Synergy" && <Synergy userData={userx}/>}
       </div>
     </section>  
   </div>
@@ -86,16 +90,16 @@ const Home = () => {
     <section className="min-h-screen w-screen lg:flex md:grid items-stretch text-white ">
       <div className="lg:w-4/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center sm:px-16 md:px-24 px-4 z-0">
         <UserInfo userData={userx}/>
-        <Experience/>
-        <Interest/>
-        <Counter/>
-        <Competition/>
-        <HighLight/>
+        <Experience userData={userx}/>
+        <Interest userData={userx}/>
+        <Counter userData={userx}/>
+        <Competition userData={userx}/>
+        <HighLight userData={userx}/>
       </div> 
       <div className="lg:w-2/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center md:px-16 px-4 z-0">
-        <TopSkill/>
-        <Endorsement/>
-        <Synergy/>
+        <TopSkill userData={userx}/>
+        <Endorsement userData={userx}/>
+        <Synergy userData={userx}/>
       </div>
     </section>
   </div>
