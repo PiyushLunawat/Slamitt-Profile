@@ -104,6 +104,18 @@
             "fileName": "FileName.jpg",
             "description": "Crowd at the event"
           }
+        ],
+        "feedBacks": [
+          {
+            "roundName": "RoundName",
+            "feedback": [{
+              "author": "Mansoor Masood",
+              "role": "Financial due diligence analyst at KPMG India",
+              "comment": "Always be open to changes as testing is a stressful and dynamic environment",
+              "date": "6 July, 2022",
+              "rating": "8/12"
+            }]
+          }
         ]
       },
       {
@@ -135,19 +147,19 @@
             "fileName": "FileName.jpg",
             "description": "Crowd at the event"
           }
+        ],
+        "feedBacks": [
+          {
+            "roundName": "RoundName",
+            "feedback": [{
+              "author": "Mansoor Masood",
+              "role": "Financial due diligence analyst at KPMG India",
+              "comment": "Always be open to changes as testing is a stressful and dynamic environment",
+              "date": "6 July, 2022",
+              "rating": "8/12"
+            }]
+          }
         ]
-      }
-    ],
-    "highlights": [
-      {
-        "roundName": "RoundName",
-        "feedback": [{
-          "author": "Mansoor Masood",
-          "role": "Financial due diligence analyst at KPMG India",
-          "comment": "Always be open to changes as testing is a stressful and dynamic environment",
-          "date": "6 July, 2022",
-          "rating": "8/12"
-        }]
       }
     ]
   }

@@ -12,19 +12,21 @@ import judges from '../../public/images/judges.png';
 const Competition = ({userData}) => {
 
   const [competition,setCompetition]=useState([]);
+  const [comp, setComp] = useState(0);
 
   useEffect(() => {
     if (userData && userData.competitions) {
       setCompetition(userData.competitions);
+      // Calculate the total number of competitions
+      setComp(userData.competitions.length);
     }
   }, [userData]);
 
-  // console.log{competition};
   
   return (
     <div className="w-full profileTopSkills">
       <div className="hide profileSidebarHead">
-        <Typography.Title level={2} >Competitions</Typography.Title>
+        <Typography.Title level={2} >Competitions ({comp})</Typography.Title>
         <Image src={Detail} alt="!" className="ml-[10px] mb-[0.5rem]"/>
       </div>
       {competition.map((competition, index) => (

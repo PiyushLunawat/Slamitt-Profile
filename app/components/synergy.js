@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import { Typography } from "antd";
 import Image from "next/image"
 import Detail from '../../public/images/detailsIcon.png';
@@ -6,7 +6,7 @@ import user from '../../public/images/user.png'
 import endorsmentIcon from "../../public/images/endorsmentIcon.png"
 import round from "../../public/images/round.png"
 
-const Synergy = () => {
+const Synergy = (userData) => {
 
   return (
     <div className="w-full profileTopSkills">
