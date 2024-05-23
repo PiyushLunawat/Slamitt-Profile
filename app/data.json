@@ -86,6 +86,7 @@
         "numberOfRounds": { "$numberInt": "7" },
         "numberOfJudges": { "$numberInt": "5" },
         "teamName": "Watermelon",
+        "teamMembers": ["Arihant Jain","Shraman Siyal"],
         "task": "Lorem ipsum dolor sit amet. Quo illum tempore cum molestiae magnam eos quibusd am reiciendis vel nobis quos et eveniet eveniet qui consectetur rerum. Et molestias veniam est. ",
         "submissionFiles": ["", "", ""],
         "media": [
@@ -105,15 +106,27 @@
             "description": "Crowd at the event"
           }
         ],
-        "feedBacks": [
+        "highLights": [
           {
-            "roundName": "RoundName",
+            "roundName": "Round1",
+            "endorsements":["collaboration","PR"],
             "feedback": [{
               "author": "Mansoor Masood",
               "role": "Financial due diligence analyst at KPMG India",
               "comment": "Always be open to changes as testing is a stressful and dynamic environment",
               "date": "6 July, 2022",
               "rating": "8/12"
+            }]
+          },
+          {
+            "roundName": "Round2",
+            "endorsements":["Team Management","Technical"],
+            "feedback": [{
+              "author": "Rajkumar Pai",
+              "role": "Founder/Managing Director Pai International Electronics Ltd.",
+              "comment": "Always be open to changes as festing is a stressful and dynamic environment. Confidence will win you. You’re gonna go to places, don’t stop festing. ",
+              "date": "6 July, 2022",
+              "rating": "8.5/12"
             }]
           }
         ]
@@ -128,7 +141,7 @@
         "numberOfRounds": { "$numberInt": "7" },
         "numberOfJudges": { "$numberInt": "5" },
         "teamName": "IIM_X039",
-        "teamMembers": [],
+        "teamMembers": ["Arihant Jain","Shraman Siyal","Jaynesh Kaasliwaal"],
         "task": "Lorem ipsum dolor sit amet. Quo illum tempore cum molestiae magnam eos quibusd am reiciendis vel nobis quos et eveniet eveniet qui consectetur rerum. Et molestias veniam est. ",
         "submissionFiles": ["", "", ""],
         "media": [
@@ -148,9 +161,10 @@
             "description": "Crowd at the event"
           }
         ],
-        "feedBacks": [
+        "highLights": [
           {
-            "roundName": "RoundName",
+            "roundName": "Round4",
+            "endorsements":["Communication","Negotiation","Marketing"],
             "feedback": [{
               "author": "Mansoor Masood",
               "role": "Financial due diligence analyst at KPMG India",

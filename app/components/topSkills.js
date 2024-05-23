@@ -2,7 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { Typography } from "antd";
 import Chart from "chart.js/auto";
 import Image from "next/image";
-import Detail from '../../public/images/detailsIcon.png';
+import Detail from '../../public/images/detailsIcon.svg';
+import TGr from '../../public/images/TGrep.svg';
+import TGi from '../../public/images/TGicon.svg';
+import AJr from '../../public/images/AJrep.svg';
+import AJi from '../../public/images/AJIcon.svg';
+import Yr from '../../public/images/Yrep.svg';
+import Yi from '../../public/images/Yicon.svg';
+
 
 const TopSkill = ({ userData }) => {
   const [skills, setSkills] = useState([]);
@@ -12,25 +19,25 @@ const TopSkill = ({ userData }) => {
     ],
     datasets: [
       {
-        label: "Top Gun",
+        label: "TG",
         data: [5, 4, 2, 5, 2, 5],
         fill: true,
-        backgroundColor: "rgba(66, 249, 230, 0.2)",
-        borderColor: "rgb(66 249 230)",
+        backgroundColor: "rgba(0, 240, 255, 0.2)",
+        borderColor: "rgba(0, 240, 255, 1)",
       },
       {
-        label: "Average Joe",
+        label: "AJ",
         data: [3, 2, 4, 5, 2, 4],
         fill: true,
-        backgroundColor: "rgba(47 ,255, 67, 0.2)",
-        borderColor: "rgb(47 255 67)",
+        backgroundColor: "rgba(0 ,255, 25, 0.2)",
+        borderColor: "rgba(0, 255, 25, 1)",
       },
       {
-        label: "You",
-        data: [4, 4, 3, 4, 4, 3], // Default data, will be updated
+        label: "Y",
+        data: skills, // Default data, will be updated
         fill: true,
-        backgroundColor: "rgba(179, 23, 254, 0.2)",
-        borderColor: "rgb(179, 23, 254)",
+        backgroundColor: "rgba(175, 8, 254, 0.2)",
+        borderColor: "rgba(175, 8, 254, 1)",
       },
     ],
   });
@@ -43,7 +50,7 @@ const TopSkill = ({ userData }) => {
       setChartData(prevData => ({
         ...prevData,
         datasets: prevData.datasets.map(dataset => 
-          dataset.label === "You" 
+          dataset.label === "Y" 
             ? { ...dataset, data: userData.topSkills } 
             : dataset
         )
@@ -91,16 +98,31 @@ const TopSkill = ({ userData }) => {
 
   return (
     <div className="w-full profileTopSkills">
-      <div className="hide profileSidebarHead">
-        <Typography.Title level={2}>Top Skills</Typography.Title>
-        <Image src={Detail} alt="Details Icon" className="ml-[10px] mb-[0.5rem]" />
+      <div className="hide profileSidebarHead z-10">
+        <h1 className="text-[30px] font-semibold pl-2">Top Skills</h1>
+        <Image src={Detail} alt="Details Icon" className="ml-[10px] cursor-pointer" />
       </div>
       <div className="profileStatsHolder">
-        <div className="profileStatsPlaceholderText hiddenMobile">
-          Finish setting up your account to access your top skills
-        </div>
-        <div className="profileTopSkillsChart">
+      <div className="relative bg-white h-[20px] top-[25px] z-10"></div>
+        <div className="">
           <canvas ref={chartRef}></canvas>
+          <div className="flex justify-between">
+          <h5 className="flex gap-1">
+              <Image src={TGr} alt="TG"/>
+              <Image src={TGi} alt="T-G"/>
+              Top Gun
+            </h5>
+            <h5 className="flex gap-1">
+              <Image src={AJr} alt="AJ"/>
+              <Image src={AJi} alt="AJ"/>
+              Average Joe
+            </h5>
+            <h5 className="flex gap-1 text-[14px]">
+              <Image src={Yr} alt="Y"/>
+              <Image src={Yi} alt="Y"/>
+              You
+            </h5>
+          </div>
         </div>
       </div>
     </div>

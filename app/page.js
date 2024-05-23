@@ -12,11 +12,11 @@ import Endorsement from "./components/endorsements";
 import Synergy from "./components/synergy";
 import Image from "next/image"
 import liticon from "../public/images/liticon.png";
-import user from "../public/images/user.png"
+import user from "../public/images/user.svg"
 import userBG from '../public/images/userBG.png';
-import dropdown from '../public/images/dropdown.png';
-import lit from '../public/images/lit.png';
-import axios from 'axios'; // Make sure to install axios if not already installed
+import dropdown from '../public/images/dropdown.svg';
+import lit from '../public/images/lit.svg';
+import axios from 'axios'; 
 
 const Home = () => {
   const [selectedComp, setSelectedComp] = useState("Competition");
@@ -54,23 +54,24 @@ const Home = () => {
 
   return (
   <>
-  <div className='hide flex w-full h-[92px] justify-between items-center'>
-    <Image src={liticon} alt='lit' className='h-[92px]'/>
-    <div className='flex items-center mr-[50px]'>
-      <Image src={user} alt="user" className="h-[44px] w-[44px] rounded-full lg:h-[44px] lg:w-[44px] mr-[15px]"/>
-      <Image src={dropdown} alt="^" className=""/>
+  <div className='fixed flex z-10 bg-white w-full h-[64px] sm:h-[85px] justify-between items-center shadow-[0_10px_20px_0px_rgba(0,0,0,0.1)]'>
+    <Image src={liticon} alt='lit' className='h-[64px] sm:h-[92px] w-auto'/>
+    <div className='flex items-center mr-[20px] sm:mr-[50px]'>
+      <Image src={user} alt="user" className="h-[39px] w-[39px] sm:h-[46px] sm:w-[46px] rounded-full mr-[15px] sm:mr-[20px] border border-gray-400 cursor-pointer"/>
+      <Image src={dropdown} alt="^" className="cursor-pointer"/>
     </div>
   </div>
-  <div className='w-full mb-7'>
-    <Image src={userBG} alt="Banner" className='h-[40vh]'/>
-    <Image src={user} alt="user" className="mobile-user h-[154px] w-[154px] rounded-full lg:h-[154px] lg:w-[154px] relative ml-[50px] mt-[-65px] mb-35"/>
+  <div className='w-full mb-11 mt-[52px] sm:mt-[85px]'>
+    <Image src={userBG} alt="Banner" className='h-[300px] sm:h-[44vh]'/>
+    <Image src={user} alt="user" className="mobile-user h-[154px] w-[154px] bg-white rounded-full relative sm:ml-4 lg:ml-16 mt-[-65px] mb-35"/>
   </div>
   <div className="mobile-view">
     <section className="min-h-screen w-screen lg:flex md:grid items-stretch text-white ">
-      <div className="lg:w-4/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center sm:px-16 md:px-24 px-4 z-0">
+      <div className="lg:w-4/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center px-4">
         <UserInfo userData={userx}/>
-        <Counter userData={userx}/>
+        <Experience userData={userx}/>
         <Interest userData={userx}/>
+        <Counter userData={userx}/>
         <div className="scroller mb-10">
           <div onClick={() => handleCompClick("Competition")} className={selectedComp === "Competition" ? "selected-comp" : "comps"}>Competitions</div>
           <div onClick={() => handleCompClick("HighLight")} className={selectedComp === "HighLight" ? "selected-comp" : "comps"}>Feedback</div>
@@ -88,7 +89,7 @@ const Home = () => {
   </div>
   <div className="hide flex bg-white">
     <section className="min-h-screen w-screen lg:flex md:grid items-stretch text-white ">
-      <div className="lg:w-4/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center sm:px-16 md:px-24 px-4 z-0">
+      <div className="lg:w-[68%] md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center sm:px-6 lg:px-16 px-4 z-0">
         <UserInfo userData={userx}/>
         <Experience userData={userx}/>
         <Interest userData={userx}/>
@@ -96,7 +97,7 @@ const Home = () => {
         <Competition userData={userx}/>
         <HighLight userData={userx}/>
       </div> 
-      <div className="lg:w-2/6 md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center md:px-16 px-4 z-0">
+      <div className="lg:w-[32%] md:w-9/10 w-full bg-white-100 text-zinc-900 justify-center text-center sm:px-6 max-[640px]:px-4 z-0">
         <TopSkill userData={userx}/>
         <Endorsement userData={userx}/>
         <Synergy userData={userx}/>
@@ -104,9 +105,9 @@ const Home = () => {
     </section>
   </div>
   
-  <footer className='hide flex w-full h-[92px] flex-row relative bottom-0 bg-black text-white justify-center items-center'>
-    <Typography.Text className="text-[20px] !text-white">Powered by</Typography.Text>
-    <Image src={lit} alt='lit' className='w-[52px] h-[56px] mx-4'/>
+  <footer className='flex w-full h-[88px] flex-row relative bottom-0 bg-black text-white justify-center items-center'>
+    <h5 className="text-[20px] !text-white mr-4">Powered by</h5>
+    <Image src={lit} alt='lit' className='w-[51px] h-[56px]'/>
   </footer>
     
   </>

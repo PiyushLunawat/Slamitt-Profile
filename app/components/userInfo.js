@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Typography } from "antd";
 import Image from "next/image";
-import Hat from '../../public/images/instituteIcon.png'
+import Hat from '../../public/images/instituteIcon.svg'
 
 const UserInfo = ({ userData }) => {
 
@@ -24,17 +24,17 @@ const UserInfo = ({ userData }) => {
 
     return(
         <div className="h-auto text-left mb-10" >
-          <div className='mobile-info flex items-center gap-5 w-full mb-5'>
-            <Typography.Title level={3} >{fname} {lname}</Typography.Title>
-            <div className='mobile-college border-2 border-gray-300 rounded-full px-5 py-3 mb-2 '>
-              <Typography.Text className="flex justify-between items-center">
-                <Image src={Hat} alt="Hat" className='mr-[5px]'/>{cname}, {ccity}
-              </Typography.Text>
+          <div className='mobile-info flex items-center gap-5 w-full mb-6'>
+            <h1 className="text-[24px] font-semibold">{fname} {lname}</h1>
+            <div className='shadow-[0_0px_16px_rgba(0,0,0,0.16)] rounded-full px-3 sm:px-5 py-1 sm:py-2 mb-2 '>
+              <h5 className="flex justify-between items-center text-[12px] font-medium leading-7">
+                <Image src={Hat} alt="Hat" className='sm:mr-2'/>{cname}
+              </h5>
             </div>
           </div>
-          <Typography.Text className="text-[1.2rem] " >
+          <h5 className="text-[12px] sm:text-[18px]" >
             {description}
-          </Typography.Text>
+          </h5>
         </div>
         
     )

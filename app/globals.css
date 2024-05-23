@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-light-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-lightitalic-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-lightitalic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-regular-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-regularitalic-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-regularitalic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-medium-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-mediumitalic-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-mediumitalic-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-semibolditalic-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-semibolditalic-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,16 +81,37 @@
   }
 }
 
+html, body {
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: thin; 
+} 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
   color: #000;
+  font-family: "Gilroy", Arial, sans-serif !important;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.comp-banner{
+  background-image: url("../public/images/competitionbanner.png");
+}
+
+.exp-card{
+  width: calc(50% - 6px);
 }
 
 .profilePageWrapper {
@@ -48,6 +134,7 @@ body {
 
 .profileStatsHolder {
   position: relative;
+  top: -35px;
 }
 
 .profileStatsHolder.blurState .profileStatsPlaceholderText {
@@ -175,7 +262,8 @@ body {
 }
 @media (max-width: 640px) {
   .mobile-user{
-    margin-left: 30%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .mobile-info{
     display: grid;
@@ -185,6 +273,9 @@ body {
   .mobile-college{
     border: none;
     padding: 0;
+  }
+  .exp-card{
+    width: 100%;
   }
   .counter{
     overflow-x: scroll;

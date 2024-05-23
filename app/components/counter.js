@@ -1,10 +1,10 @@
 import React from "react";
 import { Typography } from "antd";
 import Image from "next/image";
-import endorsement from '../../public/images/endorsmentIcon.png';
-import feedback from '../../public/images/feedbackIcon.png';
-import placement from '../../public/images/placementIcon.png';
-import topRated from '../../public/images/topratedIcon.png';
+import endorsement from '../../public/images/endorsmentIcon.svg';
+import feedback from '../../public/images/feedbackIcon.svg';
+import placement from '../../public/images/placementIcon.svg';
+import topRated from '../../public/images/topratedIcon.svg';
 
 const Counter = () => {
   const stats = [
@@ -31,15 +31,15 @@ const Counter = () => {
   ];
 
   return (
-    <div className="h-auto mb-10" >
-      <div className="counter flex justify-between items-center gap-4 px-10 py-3 rounded-2xl shadow-[0_0px_20px_0px_rgba(0,0,0,0.1)]" >
+    <div className="h-auto mb-16" >
+      <div className="counter flex justify-between items-center gap-4 px-16 py-7 rounded-2xl shadow-[0_0px_20px_0px_rgba(0,0,0,0.1)]" >
         {stats.map((stat, index) => (
         <div key={index} className="counter-blocks flex flex-col items-center px-4 py-2  ">
-          <div className="flex items-center" >
+          <div className="flex items-center " >
             <Image src={stat.icon} alt={stat.label} className="mr-2"/>
-            <Typography.Title level={2} className="mt-2 mb-0">{stat.count}</Typography.Title>
+            <h1 className="text-[32px] font-semibold">{stat.count}</h1>
           </div>
-          <Typography.Text className="sm:text-l text-[1.1rem]">{stat.label}</Typography.Text>
+          <h5 className="sm:text-[16px] text-[1.1rem] font-medium">{stat.label}</h5>
         </div>
         ))}
       </div>  
