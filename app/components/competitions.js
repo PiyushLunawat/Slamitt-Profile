@@ -12,7 +12,7 @@ import Comptype from '../../public/images/Competitiontype.svg';
 import teamlogo from '../../public/images/teamlogo.svg';
 
 const Competition = ({userData}) => {
-
+  const [selectedComp, setSelectedComp] = useState("Task");
   const [competition,setCompetition]=useState([]);
   const [comp, setComp] = useState(0);
 
@@ -32,6 +32,12 @@ const Competition = ({userData}) => {
         <Image src={Detail} alt="!" className="ml-[10px] cursor-pointer"/>
       </div>
       {competition.map((competition, index) => (
+      <>
+      <div className="scroller mb-10">
+          <div onClick={() => handleCompClick("Task")} className={selectedComp === "Task" ? "selected-comp" : "comps"}>Task</div>
+          <div onClick={() => handleCompClick("Media")} className={selectedComp === "Media" ? "selected-comp" : "comps"}>Media</div>
+          <div onClick={() => handleCompClick("Submission")} className={selectedComp === "Submission" ? "selected-comp" : "comps"}>Submission</div>
+        </div>
       <div className="mobile-compcard sm:flex rounded-2xl shadow-[0_0px_20px_0px_rgba(0,0,0,0.1)] mb-5">
          <div className="comp-banner sm:w-[20%] hide flex items-center justify-center bg-violet-700 rounded-tl-2xl rounded-bl-2xl px-5">
             <div className='bg-white w-auto rounded-full px-5 py-2 mt-44'>
@@ -84,6 +90,7 @@ const Competition = ({userData}) => {
             </div>
          </div>
       </div>
+    </> 
     ))}
     </div>
   );

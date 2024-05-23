@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react";
 import { Typography } from "antd";
 import Image from "next/image";
-import Hat from '../../public/images/instituteIcon.svg'
+import Hat from '../../public/images/instituteIcon.svg';
+import fb from '../../public/images/fbicon.svg';
+import insta from '../../public/images/instaicon.svg';
+import yt from '../../public/images/yticon.svg';
+import x from '../../public/images/xicon.svg';
 
 const UserInfo = ({ userData }) => {
 
@@ -30,6 +34,12 @@ const UserInfo = ({ userData }) => {
               <h5 className="flex justify-between items-center text-[12px] font-medium leading-7">
                 <Image src={Hat} alt="Hat" className='sm:mr-2'/>{cname}
               </h5>
+            </div>
+            <div className="flex">
+            <Image src={fb} alt="" className=""/>
+            <Image src={insta} alt="" className=""/>
+            <Image src={yt} alt="" className=""/>
+            <Image src={x} alt="" className=""/>
             </div>
           </div>
           <h5 className="text-[12px] sm:text-[18px]" >

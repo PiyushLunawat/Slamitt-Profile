@@ -114,6 +114,24 @@ body {
   width: calc(50% - 6px);
 }
 
+.comps{
+  display: inline-block;
+  font-size: 14px;
+  color: #000;
+  padding: 3px 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.selected-comp{
+  display: inline-block;
+   background: #000; 
+   font-size: 14px;
+   color: #fff;
+   padding: 3px 13px;
+   border-radius: 25px;
+   cursor: pointer;
+}
+
 .profilePageWrapper {
   width: 100%;
   overflow-x: hidden;
@@ -304,6 +322,7 @@ body {
     color: #000;
     padding: 0 20px;
     font-weight: 600;
+    cursor: pointer;
   }
   .selected-comp{
     display: inline-block;
@@ -311,6 +330,7 @@ body {
      color: #fff;
      padding: 12px 20px;
      border-radius: 25px;
+     cursor: pointer;
   }
   .mobile-compcard{
     display: grid;
